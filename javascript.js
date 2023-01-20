@@ -33,3 +33,16 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function playRound(playerSelection, computerSelection) {
+    //normalize cases for playerSelection
+
+    //Compare rps values
+    //determine winners
+    //conclusion = `${winnerSelection} beats ${loserSelection}`
+
+    //if player win
+    //"You Win! " + conclusion
+    //if player lose
+    //"You Lose! " + conclusion
+}
