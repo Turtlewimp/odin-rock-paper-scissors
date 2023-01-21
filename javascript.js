@@ -32,11 +32,19 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
-
 function playRound(playerSelection, computerSelection) {
-    //normalize cases for playerSelection
 
+    let playCombo = playerSelection.concat(computerSelection);
+    //tie situation
+    if (playerSelection == computerSelection) {
+        return "tie";
+    }
+    else if (playCombo == "rockscissors" || playCombo == "paperrock" || playCombo == "scissorsrock") {
+        return "win";
+    }
+    else {
+        return "lose";
+    }
     //Compare rps values
     //determine winners
     //conclusion = `${winnerSelection} beats ${loserSelection}`
@@ -46,3 +54,9 @@ function playRound(playerSelection, computerSelection) {
     //if player lose
     //"You Lose! " + conclusion
 }
+
+console.log(playRound("rock", "rock"));
+console.log(playRound("paper", "rock"));
+console.log(playRound("scissors", "paper"));
+
+//normalize cases for playerSelection
