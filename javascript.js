@@ -1,4 +1,6 @@
-//return random rps choice
+//getplayerchoice
+
+
 function getComputerChoice() {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
@@ -12,24 +14,32 @@ function getComputerChoice() {
     }
 }
 
-//function that 
-//compares player's choice and computerChoice 
-//to determine outcome of a round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
+  
+    const div = document.querySelector('#board');
+    div.textContent = playerSelection + computerSelection;
 
+    //console.log(playerSelection);
+    //console.log(computerSelection);
     let playCombo = playerSelection.concat(computerSelection);
 
     //compare for play outcome
     if (playerSelection == computerSelection) {
-        return "tie";
+        return console.log("tie");
     }
     else if (playCombo == "rockscissors" || playCombo == "paperrock" || playCombo == "scissorsrock") {
-        return "win";
+        return console.log("win");
     }
     else {
-        return "lose";
+        return console.log("lose");
     }
+
 }
+
+//when playRound is called
+//what triggers playRound? when a button is clicked
+//when button is clicked
+//playRound is called and takes in keyCode value of button for the playerSelection
 
 /*
 //play 5 rounds of rock paper scissors
@@ -93,8 +103,6 @@ function game() {
     }
 }
 */
-
-//game();
 
 //if game ends, prompt user to play again
 
