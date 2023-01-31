@@ -52,9 +52,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-//let playerChoice = prompt().toLowerCase();
-//console.log(playerChoice);
-
+/*
 //play 5 rounds of rock paper scissors
 function game() {
     
@@ -123,7 +121,9 @@ function game() {
         console.log("You lose the game!");
     }
 }
+*/
 
-game();
+//game();
 
 //if game ends, prompt user to play again
+
