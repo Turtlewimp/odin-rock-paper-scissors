@@ -1,25 +1,5 @@
-//function that returns a random outcome from three options (rock, paper, scissors)
+//return random rps choice
 function getComputerChoice() {
-    //generate random integer between 0 and 2
-    //if random number is 0, then rock
-    //if random number is 1, then paper
-    //if random number is 2, then scissors 
-
-    //if-else statement version
-    /*
-    //let randomInt = Math.floor(Math.random() * 3);
-    if (randomInt == 0) {
-        return "rock";
-    }
-    else if (randomInt == 1) {
-        return "paper";
-    }
-    else {
-        return "scissors";
-    }
-    */
-
-    //switch statement version
     switch (Math.floor(Math.random() * 3)) {
         case 0:
             return "rock";
@@ -32,21 +12,20 @@ function getComputerChoice() {
     }
 }
 
-//function that compares player's choice and computerChoice to determine outcome of a round of rock paper scissors
+//function that 
+//compares player's choice and computerChoice 
+//to determine outcome of a round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
 
     let playCombo = playerSelection.concat(computerSelection);
 
     //compare for play outcome
-    //tie situation
     if (playerSelection == computerSelection) {
         return "tie";
     }
-    //test for winning combo
     else if (playCombo == "rockscissors" || playCombo == "paperrock" || playCombo == "scissorsrock") {
         return "win";
     }
-    //assume losing combo
     else {
         return "lose";
     }
@@ -118,6 +97,4 @@ function game() {
 //game();
 
 //if game ends, prompt user to play again
-
-
 
