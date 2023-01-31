@@ -10,8 +10,23 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <button data-key = "rock" id = "btn">Rock</button>
-    <button data-key = "paper" id = "btn">Paper</button>
-    <button data-key = "scissors" id = "btn">Scissors</button>
+    <div>Rock-Paper-Scissors</div>
+
+    <button id = "rock">Rock</button>
+    <button id = "paper">Paper</button>
+    <button id = "scissors">Scissors</button>
+
+    <!--Instructions and announcements-->
+    <div></div>
+
+    <script>
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                playRound(button.id, getComputerChoice());
+            });
+        });
+    </script>
+
 </body>
 </html>
