@@ -71,17 +71,9 @@ function game() {
         //declare round
         console.log("Round " + i);
         
-        //get and validate player choice
-        let validate = false;
-        while (validate == false) {
-            playerChoice = prompt().toLowerCase();
-            if(playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
-                validate = true;
-            }
-            else {
-                alert("Invalid input. Try again.");
-            }    
-        }
+        
+        //playerChoice = prompt().toLowerCase();
+           
 
         //print out player choice
         console.log("You: " + playerChoice);
@@ -126,4 +118,6 @@ function game() {
 //game();
 
 //if game ends, prompt user to play again
+
+
 
