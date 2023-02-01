@@ -14,16 +14,16 @@ function getComputerChoice() {
 //const div = document.querySelector('#displayBoard');
 //div.textContent = playerSelection + computerSelection;
 
-
+let clickCounter = 0;
 function playRound(playerSelection, computerSelection) {
     const playerPoints = document.querySelector('#playerPoints');
     const computerPoints = document.querySelector('#computerPoints');
     const round = document.querySelector('#round');
     const commentary = document.querySelector('#commentary');
 
-
     //update round display
-    console.log("round");
+    clickCounter ++;
+    round.textContent = `Round: ${clickCounter} of 5`;
     let playCombo = playerSelection.concat(computerSelection);
 
     //compare for play outcome
@@ -50,6 +50,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function displayUpdate() {
+
+
     //checks div#round 
     //if round changes from 4 to 5
     //update playbyplay with final score and game
