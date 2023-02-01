@@ -11,32 +11,57 @@ function getComputerChoice() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-  
-    const div = document.querySelector('#displayBoard');
-    div.textContent = playerSelection + computerSelection;
+//const div = document.querySelector('#displayBoard');
+//div.textContent = playerSelection + computerSelection;
 
-    //console.log(playerSelection);
-    //console.log(computerSelection);
+
+function playRound(playerSelection, computerSelection) {
+    const playerPoints = document.querySelector('#playerPoints');
+    const computerPoints = document.querySelector('#computerPoints');
+    const round = document.querySelector('#round');
+    const commentary = document.querySelector('#commentary');
+
+
+    //update round display
+    console.log("round");
     let playCombo = playerSelection.concat(computerSelection);
 
     //compare for play outcome
     if (playerSelection == computerSelection) {
+        commentary.textContent = `${playerSelection} ties ${computerSelection}`;
         return console.log("tie");
     }
-    else if (playCombo == "rockscissors" || playCombo == "paperrock" || playCombo == "scissorsrock") {
+    else if (playCombo == "rockscissors" || playCombo == "paperrock" || playCombo == "scissorspaper") {
+        //update playerPoints ++
+        commentary.textContent = `${playerSelection} beats ${computerSelection}`;
         return console.log("win");
     }
-    else {
+    else if (playCombo == "rockpaper" || playCombo == "paperscissors" || playCombo == "scissorsrock"){
+        //update computerPoints ++
+        commentary.textContent = `${computerSelection} beats ${playerSelection}`;
         return console.log("lose");
     }
+    else {
+        return console.log("ERROR");
+    }
+
+
 
 }
 
-//when playRound is called
-//what triggers playRound? when a button is clicked
-//when button is clicked
-//playRound is called and takes in keyCode value of button for the playerSelection
+function displayUpdate() {
+    //checks div#round 
+    //if round changes from 4 to 5
+    //update playbyplay with final score and game
+    //"you win" "you lose" "it's a tie"
+    //button labels all change to reset
+    //"click the button again to reset"
+
+    //if round changes from 5 to 6 then
+    //immediately reset all stats
+}
+
+
 
 /*
 //play 5 rounds of rock paper scissors
