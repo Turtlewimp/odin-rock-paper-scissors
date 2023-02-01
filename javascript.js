@@ -1,6 +1,3 @@
-//getplayerchoice
-
-
 function getComputerChoice() {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
@@ -16,7 +13,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   
-    const div = document.querySelector('#board');
+    const div = document.querySelector('#displayBoard');
     div.textContent = playerSelection + computerSelection;
 
     //console.log(playerSelection);
